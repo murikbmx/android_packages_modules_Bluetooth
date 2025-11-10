@@ -92,4 +92,9 @@ class AdapterBinder(rawBinder: IBinder) {
     fun killBluetoothProcess() {
         adapterBinder.killBluetoothProcess()
     }
+    
+    @Throws(RemoteException::class)
+    fun getConnectionState(): Int {
+        return adapterBinder.getAdapterConnectionState();
+    }
 }
